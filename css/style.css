@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: azoRegular;
+  src: url("../fonts/azoSans-Regular.otf");
+}
+@font-face {
+  font-family: azoLight;
+  src: url("../fonts/azoSans-Light.otf");
+}
+@font-face {
+  font-family: azoBlack;
+  src: url("../fonts/azoSans-Black.otf");
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #232323;
+}
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 5px;
+}
+body h1 {
+  color: #02F1F3;
+  letter-spacing: 1px;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  font-family: azoRegular;
+}
+body .content {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-color: #303030;
+  border-radius: 5px;
+}
+body .content .divSelects {
+  display: flex;
+  gap: 5px;
+}
+body .content .divSelects select {
+  font-size: 18px;
+  padding: 10px;
+  width: 50%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  background-color: #303030;
+  border: 2px solid #02F1F3;
+  color: #02F1F3;
+}
+body .content .textArea {
+  display: flex;
+  gap: 5px;
+  border-radius: 5px;
+}
+body .content textarea {
+  font-size: 18px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  resize: none;
+  background-color: #303030;
+  border: 2px solid #02F1F3;
+  outline: none;
+}
+body .content button {
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background-color: #02F1F3;
+  color: #303030;
+  border-radius: 5px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+}
+body .content button:hover {
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=style.css.map */
