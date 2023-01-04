@@ -1,0 +1,81 @@
+@use 'mixins'
+@use 'variables'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+@font-face
+    font-family: azoRegular
+    src: url('../fonts/azoSans-Regular.otf')
+@font-face
+    font-family: azoLight
+    src: url('../fonts/azoSans-Light.otf')
+@font-face
+    font-family: azoBlack
+    src: url('../fonts/azoSans-Black.otf')
+
+body
+    @include mixins.flex
+    width: 100vw
+    height: 100vh
+    background-color: variables.$bg-color
+
+    .container
+        @include mixins.flex
+        flex-direction: column
+        gap: 10px
+        margin: 5px
+
+    h1
+        color: variables.$color-title
+        @include mixins.title
+
+    .content
+        @include mixins.formated
+        flex-direction: column
+        padding: 15px
+        box-shadow: 0 1px 2px #0003
+        background-color: variables.$bg-areaContent
+        border-radius: 5px
+
+        .divSelects
+            @include mixins.formated
+
+            select
+                @include mixins.formatedContent
+                width: 50%
+                cursor: pointer
+                outline: none
+                border-radius: 5px
+                background-color: variables.$bg-areaContent
+                border: 2px solid variables.$color-title
+                color: variables.$color-title
+
+        .textArea
+            @include mixins.formated
+            border-radius: 5px
+
+        textarea
+            @include mixins.formatedContent
+            width: 50%
+            border-radius: 5px
+            resize: none
+            background-color: variables.$bg-areaContent
+            border: 2px solid variables.$color-title
+            outline: none
+
+        button
+            @include mixins.formatedContent
+            border: none
+            background-color: #02F1F3
+            color: variables.$bg-areaContent
+            border-radius: 5px
+            margin-top: 10px
+            letter-spacing: 1px
+            font-weight: 600
+            cursor: pointer
+
+            &:hover
+                opacity: 0.8
