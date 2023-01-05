@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tradutor</title>
+    <!-- Folha de estilo -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="container">
         <h1>Tradutor</h1>
@@ -20,7 +23,10 @@
                 <textarea id="textAreaFrom" rows="8" placeholder="Digitar texto"></textarea>
                 <textarea id="textAreaTo" rows="8" placeholder="Tradução"></textarea>
             </div>
-            <button id="btnTranslate">Traduzir</button>
+            <div class="btn-butons">
+                <button id="btnTranslate">Traduzir <i class="fa-solid fa-earth-americas"></i></button>
+                <button id="btnDelete">Apagar <i class="fa-solid fa-trash"></i></button>
+            </div>
         </div>
     </div>
 
