@@ -9,7 +9,33 @@ const contries = {
     'es-Es' : 'Espanhol',
     'it-It' : 'Italiano',
     'ja-JP' : 'Japão',
-    'pt-BR' : 'Português'
+    'pt-BR' : 'Português',
+    'ru-RS' : 'Russo',
+    'de-Al' : 'Alemão',
+    'ar-AR' : 'Árabe',
+    'el-GR' : 'Grego',
+    'tr-TU' : 'Turco',
+    'hr-CR' : 'Croata',
+    'sl-ES' : 'Esloveno',
+    'fr-FR' : 'Francês',
+    'sk-ES' : 'Eslovaco',
+    'sv-SV' : 'Sueco',
+    'fi-SU' : 'Filandês',
+    'ka-KA' : 'Georgiano',
+    'hu-MA' : 'Húngaro',
+    'fa-FÃ' : 'Persa',
+    'ga-GA' : 'Irlandês',
+    'is-IS' : 'Islandês',
+    'he-HE' : 'Hebraico',
+    'lb-LU' : 'Luxemburguês',
+    'mt-MA' : 'Maltês',
+    'mn-MO' : 'Mongol',
+    'ne-NE' : 'Nepalês',
+    'nl-NE' : 'Holandês',
+    'sr-CP' : 'Sérvio',
+    'th-TA' : 'Tailandês',
+    'uk-UK' : 'Ucraniano',
+    'vi-TI' : 'Vietnamita'
 };
 
 selects.forEach((tag) => {
@@ -23,15 +49,12 @@ selects.forEach((tag) => {
     }
 });
 
-
-
-
 btnTranslate.addEventListener('click', () => {
     textAreaFrom.value ? translation() : alert('Digite o texto ou palavra que deseja traduzir!');
 });
 
 btnDelete.addEventListener('click', () => {
-    if(!(textAreaFrom.value === '') && !(textAreaTo.value === '')){
+    if(!(textAreaFrom.value === '') || !(textAreaTo.value === '')){
         textAreaFrom.value = '';
         textAreaTo.value = '';
     } else if((textAreaFrom.value === '') && (textAreaTo.value === '')){
