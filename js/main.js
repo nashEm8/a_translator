@@ -5,35 +5,35 @@ const btnTranslate = document.querySelector('#btnTranslate');
 const btnDelete = document.querySelector('#btnDelete');
 
 const contries = {
-    'en-GB' : 'Inglês',
-    'es-Es' : 'Espanhol',
-    'it-It' : 'Italiano',
-    'ja-JP' : 'Japão',
-    'pt-BR' : 'Português',
-    'ru-RS' : 'Russo',
     'de-Al' : 'Alemão',
     'ar-AR' : 'Árabe',
-    'el-GR' : 'Grego',
-    'tr-TU' : 'Turco',
     'hr-CR' : 'Croata',
-    'sl-ES' : 'Esloveno',
-    'fr-FR' : 'Francês',
     'sk-ES' : 'Eslovaco',
-    'sv-SV' : 'Sueco',
+    'sl-ES' : 'Esloveno',
+    'es-Es' : 'Espanhol',
     'fi-SU' : 'Filandês',
+    'fr-FR' : 'Francês',
     'ka-KA' : 'Georgiano',
+    'el-GR' : 'Grego',
+    'he-HE' : 'Hebraico',
+    'nl-NE' : 'Holandês',
     'hu-MA' : 'Húngaro',
-    'fa-FÃ' : 'Persa',
+    'en-GB' : 'Inglês',
     'ga-GA' : 'Irlandês',
     'is-IS' : 'Islandês',
-    'he-HE' : 'Hebraico',
+    'it-It' : 'Italiano',
+    'ja-JP' : 'Japão',
     'lb-LU' : 'Luxemburguês',
     'mt-MA' : 'Maltês',
     'mn-MO' : 'Mongol',
     'ne-NE' : 'Nepalês',
-    'nl-NE' : 'Holandês',
+    'fa-FÃ' : 'Persa',
+    'pt-BR' : 'Português',
+    'ru-RS' : 'Russo',
     'sr-CP' : 'Sérvio',
+    'sv-SV' : 'Sueco',
     'th-TA' : 'Tailandês',
+    'tr-TU' : 'Turco',
     'uk-UK' : 'Ucraniano',
     'vi-TI' : 'Vietnamita'
 };
@@ -57,6 +57,7 @@ btnDelete.addEventListener('click', () => {
     if(!(textAreaFrom.value === '') || !(textAreaTo.value === '')){
         textAreaFrom.value = '';
         textAreaTo.value = '';
+        window.location.reload(true);
     } else if((textAreaFrom.value === '') && (textAreaTo.value === '')){
         alert('Não há nenhum dado inserido para ser apagado!')
     }
@@ -71,6 +72,7 @@ const url = `${baseUrl}${textAreaFrom.value}&langpair=${selects[0].value}|${sele
     const showTranslation = async () => {
         const showResponse = await diceTranslator();
         textAreaTo.textContent = showResponse.responseData.translatedText;
+        console.log(showResponse);
     }   
 
     showTranslation()
