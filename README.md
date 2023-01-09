@@ -5,7 +5,7 @@ Um tradutor de palavras feito com Javascript por meio de uma API.
 
 <br>
   
-<h2>📑 Resultado</h2>
+<h2>📑 Como usar</h2>
 <br>
 Ao entrar no link, basta escolher o idioma de origem da palavra e do lado direito o idioma no qual você deseja traduzir a palavra ou frase 
 que você digitou. Depois é só clicar em "Traduzir" e caso queira apagar o que digitou... é só clicar em apagar
